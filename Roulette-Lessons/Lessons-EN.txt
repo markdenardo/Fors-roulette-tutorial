@@ -1,9 +1,9 @@
 $Page Lode by Fors
 $TargetName Lode
 
-lode.png
+Roulette.png
 
-*Lode* by $Link *Fors*<https://fors.fm> 
+*Roulette* by $Link *Fors*<https://fors.fm> 
 
 Vivid memories of transistors and warm plastic from a faraway place were distilled into a single voice of what we loved most. Lode is a monophonic bass synthesizer inspired by our most beloved vintage pieces; instruments that were greater than the sum of their parts and full of charm.
 
@@ -24,76 +24,69 @@ $Comment -----------------------------------------------------------------------
 $Page Structure
 $TargetName Structure
 
-lode.png
-
-Lode is based on an analog-inspired engine, equipped with one unison oscillator, one sub oscillator and a resonant 4-pole lowpass filter.
-The unison oscillator has a variable waveshape, from saw to square with adjustable pulse width. By increasing the detune amount, a second oscillator with the same timbre will be mixed in. The sub oscillator has a static square waveshape, its output can be mixed between 1 or 2 octaves below the fundamental pitch.
-
-The filter is tuned for a rougher edge, with the capability of creating resonant overtones that can be played chromatically. This lets you dial in the filter just right to find different overtones and pockets of sound that yield a great depth in sound design.
-
-When playing Lode, it's important to note that legato notes will have a slide for that classic bassline sound.
+The sequencer sends note and rhythm data to the synth engine for generating melodies. It is entirely polymetric and asymmetric.
 
 Divider.tif
 
+Roulette.png
+
 → $Link Parameters <GotoPage:Parameters>
 
-↑ $Link Top <GotoPage:Lode>
+↑ $Link Top <GotoPage:Roulette>
 
 $Comment --------------------------------------------------------------------------------
 $Page Parameters
 $TargetName Parameters
 
-lode.png
+*Pitch, Transposition & Trig*
 
-Lode has 8 different parameters, each controlling a different component of the synthesizer engine.
+The sequencer starts with 'Pitch' for its base note. It then goes through two transposition stages and is finally sent as a note by Trig.
 
-*Oscillator controls*
+Divider.tif
 
--> *Shape*
+-> *Pitch*
 
-This controls the waveshape of the main oscillator.
-Between -50 and 0 this blends between a sawtooth and a squarewave, while 0 to +50 controls the pulse width of the square.
+Pitch is a list of pitches that can have a length of up to 16 values set by Len. In the Pitch section, you can also set a Tonic and a Scale which will quantize all notes as desired.
 
--> *Detune*
+Pitch.png
 
-This controls the amount of unison detune in the main oscillator.
+-> *Transpose*
 
-When increased, this brings in a second oscillator with a frequency offset. Lower values (0 to 40) will result in beatings while higher values will result in pitch ratios. At a value of 50 the offset is equivalent to 7 semitones, a perfect fifth and at a value of 100 the offset is at an octave.
+Transpose is a list of intervals in semitones that affects the incoming notes in succession. The intervals are changed by typing into the Transpose text fields. 
 
--> *Sub*
+For example; "0 5 7" is a pattern length of 3 wherein 0 will have no effect, 5 is a perfect fourth and 7 is a perfect fifth. Each number needs a space in between. 
 
-This controls the amplitude of the sub oscillator.
-When increased, the first sub output is heard, which is one octave below the main oscillator. As the value is increased further, a second octave is mixed in for ultra-low bass.
+Div divides the incoming clock and will repeat each number according to the division.
 
--> *Decay*
+-> *Trigs*
 
-This controls the decay time of the amp envelope.
-The envelope has a hold and decay stage, as a note is being held the envelope will be continually outputting sound. as the note is released, the decay stage is activated and a fade-out occurs.
+Trigs sends out the current pitch, a result of Pitch + 1st Transp + 2nd Transp. Reset deter- mines the length of the Trig pattern.
 
-*Filter controls*
+-> *Velocity*
 
--> *Cutoff*
+The Velocity lane can be used like transpose to introduce different velocities for the trigs.
 
-This controls the cutoff frequency of the lowpass filter.
-The lowpass filter is always tracking the frequency of the main oscillator. This means that the cutoff setting is relative, and results in a natural sound. By decreasing the cutoff frequency less harmonics will be heard in the sound, resulting a warmer tone.
+Transpose.png
 
--> *Res*
+*Polymeters & Asymmetry*
 
-This controls the resonance amount in the lowpass filter.
-Increasing this will result in a peak at the cutoff frequency.
+As mentioned previously, the sequencer is always polymetric and also asymmetric. This means that the pitch information is detached from the trig events. This means you can create complex sequences that evolve over time depending on the numerical relationships of the dif- ferent sequence lengths and how they create a continually rotating pattern. You could see it as an algorithmic arpeggiator, and can take a while to fully grasp. We highly recommend setting a Scale.
 
--> *Sweep*
+-> *Monometric*
 
-This controls the time of the filter cutoff envelope and is bi-directional.
-Increasing the sweep time (0 .. 50) will create longer decaying sweeps while decreasing into the negative range (-50 .. 0) will make it into a slope, meaning that it will also have a fade-in segment.
+The sequences have the same length
 
--> *Depth*
+Monometric.png
 
-This controls the depth of the filter envelope modulation.
+-> *Polymetric*
+
+The sequences have different lengths
+
+Polymetric.png
 
 → $Link Credits <GotoPage:Credits>
 
-↑ $Link Top <GotoPage:Lode>
+↑ $Link Top <GotoPage:Rouletee>
 
 $Comment --------------------------------------------------------------------------------
 $Page Credits
@@ -112,4 +105,4 @@ If there are any questions, issues, or if you just want to say hello, please con
 
 Divider.tif
 
-↑ $Link Top <GotoPage:Lode>
+↑ $Link Top <GotoPage:Roulette>
